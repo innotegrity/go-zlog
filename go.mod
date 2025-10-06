@@ -5,7 +5,7 @@ go 1.23
 require (
 	github.com/rs/zerolog v1.34.0
 	github.com/samber/slog-zerolog/v2 v2.7.3
-	go.innotegrity.dev/xerrors v0.1.0
+	go.innotegrity.dev/xerrors v0.2.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 )
 
@@ -17,5 +17,3 @@ require (
 	golang.org/x/sys v0.12.0 // indirect
 	golang.org/x/text v0.16.0 // indirect
 )
-
-replace go.innotegrity.dev/xerrors => ../go-xerrors
