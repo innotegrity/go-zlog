@@ -70,9 +70,14 @@ func (l *Logger) Close() {
 	}
 }
 
+// GetLevel returns the current level of the logger.
+func (l *Logger) GetLevel() Level {
+	return Level(l.Logger.GetLevel())
+}
+
 // IsDebugEnabled returns whether or not debug logging is enabled.
 func (l *Logger) IsDebugEnabled() bool {
-	return l.GetLevel() <= zerolog.DebugLevel
+	return l.GetLevel() <= DebugLevel
 }
 
 // ReplaceLevel replaces the minimum logging level for the underlying [zerolog.Logger] and returns the previous level.

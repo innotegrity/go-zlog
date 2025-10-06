@@ -4,6 +4,10 @@
 
 No unreleased changes
 
+## v0.2.2 (Released 2025-10-06)
+
+* Added `GetLevel` function to `Logger`
+
 ## v0.2.1 (Released 2025-10-06)
 
 * Updated to `go.innotegrity.dev/xerrors` version 0.3.1
