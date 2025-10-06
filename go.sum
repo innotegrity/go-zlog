@@ -15,8 +15,8 @@ github.com/samber/slog-common v0.18.1 h1:c0EipD/nVY9HG5shgm/XAs67mgpWDMF+MmtptdJ
 github.com/samber/slog-common v0.18.1/go.mod h1:QNZiNGKakvrfbJ2YglQXLCZauzkI9xZBjOhWFKS3IKk=
 github.com/samber/slog-zerolog/v2 v2.7.3 h1:/MkPDl/tJhijN2GvB1MWwBn2FU8RiL3rQ8gpXkQm2EY=
 github.com/samber/slog-zerolog/v2 v2.7.3/go.mod h1:oWU7WHof4Xp8VguiNO02r1a4VzkgoOyOZhY5CuRke60=
-go.innotegrity.dev/xerrors v0.3.1 h1:fIk6Q8E9qAXXI8HqMbDHkwHIfO9LnI0eew/O5jmGCVk=
-go.innotegrity.dev/xerrors v0.3.1/go.mod h1:F62YyLkN6wXfmxYAv9xVPYtn6w55dJtHFCKcRdQhRY8=
+go.innotegrity.dev/xerrors v0.3.2 h1:UEi7C9Vs+RkYuOAMh0NWPzi8sMezLLuGlqpiE92tPYw=
+go.innotegrity.dev/xerrors v0.3.2/go.mod h1:F62YyLkN6wXfmxYAv9xVPYtn6w55dJtHFCKcRdQhRY8=
 golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.6.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.12.0 h1:CM0HF96J0hcLAwsHPJZjfdNzs0gftsLfgKt57wWHJ0o=
