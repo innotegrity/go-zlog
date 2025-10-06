@@ -32,31 +32,31 @@ func NewFileWriter(file string, dirMode os.FileMode, fileMode os.FileMode, maxAg
 	dir := filepath.Dir(file)
 	if _, err := os.Stat(dir); err != nil {
 		if !os.IsNotExist(err) {
-			errx := xerrors.Wrapf(FileWriterPathError, err, "unable to stat log folder '%s': %s", dir, err.Error()).
+			xerr := xerrors.Wrapf(FileWriterPathError, err, "unable to stat log folder '%s': %s", dir, err.Error()).
 				WithAttrs(map[string]any{"log_file": file, "log_folder": dir})
-			return nil, errx
+			return nil, xerr
 		}
 		if err := os.MkdirAll(dir, dirMode); err != nil {
-			errx := xerrors.Wrapf(FileWriterPathError, err, "failed to create log folder '%s': %s", dir, err.Error()).
+			xerr := xerrors.Wrapf(FileWriterPathError, err, "failed to create log folder '%s': %s", dir, err.Error()).
 				WithAttrs(map[string]any{"log_file": file, "log_folder": dir})
-			return nil, errx
+			return nil, xerr
 		}
 	}
 
 	// create the file if it doesn't exist ; otherwise make sure we can write to it
 	h, err := os.OpenFile(file, os.O_CREATE|os.O_APPEND|os.O_WRONLY, fileMode)
 	if err != nil {
-		errx := xerrors.Wrapf(FileWriterPathError, err, "failed to open log file '%s' for writing: %s", file, err).
+		xerr := xerrors.Wrapf(FileWriterPathError, err, "failed to open log file '%s' for writing: %s", file, err).
 			WithAttr("log_file", file)
-		return nil, errx
+		return nil, xerr
 	}
 	h.Close()
 
 	// fix the permissions on the file
 	if err := os.Chmod(file, fileMode); err != nil {
-		errx := xerrors.Wrapf(FileWriterPermissionsError, err, "failed to set permissions on log file '%s': %s",
+		xerr := xerrors.Wrapf(FileWriterPermissionsError, err, "failed to set permissions on log file '%s': %s",
 			file, err).WithAttr("log_file", file)
-		return nil, errx
+		return nil, xerr
 	}
 
 	return &FileWriter{
