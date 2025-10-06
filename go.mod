@@ -5,7 +5,7 @@ go 1.23
 require (
 	github.com/rs/zerolog v1.34.0
 	github.com/samber/slog-zerolog/v2 v2.7.3
-	go.innotegrity.dev/xerrors v0.2.0
+	go.innotegrity.dev/xerrors v0.3.1
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 )
 
