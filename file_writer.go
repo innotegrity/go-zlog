@@ -25,6 +25,10 @@ type FileWriter struct {
 }
 
 // NewFileWriter creates and initializes a new [FileWriter] object.
+//
+// This function may return an error with any of the following codes:
+// - [FileWriterPathError]
+// - [FileWriterPermissionsError]
 func NewFileWriter(file string, dirMode os.FileMode, fileMode os.FileMode, maxAge, maxCount, maxSize int) (
 	*FileWriter, xerrors.Error) {
 
