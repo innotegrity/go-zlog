@@ -4,7 +4,7 @@
 
 No unreleased changes
 
-## v0.2.2 (Released 2025-10-06)
+## v0.2.3 (Released 2025-10-06)
 
 * Added `GetLevel` function to `Logger`
 
